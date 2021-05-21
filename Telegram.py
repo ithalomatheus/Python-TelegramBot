@@ -7,7 +7,7 @@ import os
 
 class TelegramBot:
     def __init__(self):
-        iTOKEN  = 'INFORMAR AQUI O SEU TOKEN'
+        iTOKEN  = '1894679777:AAFgRVeSfxUo_o4ueAairQc5SbuEg7aN1Sw'
         self.iURL = f'https://api.telegram.org/bot{iTOKEN}/'
 
     def Iniciar(self):
@@ -49,7 +49,7 @@ class TelegramBot:
         elif mensagem.lower() in ('n', 'não'):
             return ''' Item não incluso! Informe o codigo do item: '''
         else:
-            return 'Para acessar o cardapio digite "menu"'
+            return 'mande sua chave GOLD para continuar'
 
     def responder(self, resposta, chat_id):
         iLINK_REQ = f'{self.iURL}sendMessage?chat_id={chat_id}&text={resposta}'
@@ -58,5 +58,5 @@ class TelegramBot:
 
 
 bot = TelegramBot()
-bot.Iniciar() 
+bot.Iniciar(/start) 
 
